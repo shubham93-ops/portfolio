@@ -21,7 +21,7 @@
     <!-- Font Awesome 6 Icons (reliable, includes brand icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="stylesheet" href="style.css?v=12">
+    <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
 
@@ -42,7 +42,6 @@
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#certifications" class="nav-link">Certifications</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="assets/Ram_Sewak_Sharma_Resume.pdf" download="Ram_Sewak_Sharma_Resume.pdf" target="_blank" class="nav-link nav-link-resume"><i class="fa-solid fa-file-arrow-down"></i> Resume</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="assets/Ram_Sewak_Sharma_Resume.pdf" download="Ram_Sewak_Sharma_Resume.pdf" target="_blank" class="nav-resume" title="Download Ram Sewak Sharma's Resume (PDF)">
@@ -87,18 +86,14 @@
                     <span class="cursor">|</span>
                 </div>
                 <p class="hero-description">
-                    Cybersecurity professional specializing in <strong>Penetration Testing</strong>, <strong>Vulnerability Assessment</strong>, and <strong>Application Security</strong>, with hands-on experience in web, API, network, and mobile security testing.
+                    Cybersecurity professional specializing in <strong>Penetration Testing</strong>, <strong>Vulnerability Assessment</strong>, and <strong>Application Security</strong>, with hands-on experience in web, API, and network security testing.
                 </p>
                 <div class="hero-actions">
-                    <a href="assets/Ram_Sewak_Sharma_Resume.pdf" download="Ram_Sewak_Sharma_Resume.pdf" target="_blank" class="btn btn-primary" id="downloadResumeHero">
-                        <i class="fa-solid fa-file-arrow-down"></i>
-                        Download Resume
-                    </a>
-                    <a href="#projects" class="btn btn-outline">
+                    <a href="#projects" class="btn btn-primary">
                         <i class="fa-solid fa-folder-open"></i>
                         View My Work
                     </a>
-                    <a href="#contact" class="btn btn-ghost">
+                    <a href="#contact" class="btn btn-outline">
                         <i class="fa-solid fa-paper-plane"></i>
                         Get In Touch
                     </a>
@@ -157,7 +152,7 @@
             <div class="about-grid">
                 <div class="about-text reveal">
                     <p>
-                        I'm a <strong>BCA graduate</strong> specializing in cybersecurity, penetration testing, vulnerability assessment, and application security, with hands-on experience across web, API, network, and mobile security testing.
+                        I'm a <strong>BCA graduate</strong> specializing in cybersecurity, penetration testing, vulnerability assessment, and application security, with hands-on experience across web, API, and network security testing.
                     </p>
                     <p>
                         Proficient in identifying and validating security flaws aligned with the <strong>OWASP Top 10</strong>, utilizing industry-standard tools including <strong>Burp Suite, Nmap, SQLMap, Wireshark, Metasploit, and Nessus</strong>. Grounded in networking protocols (TCP/IP, DNS, HTTP/HTTPS) and practical security assessment methodologies.
@@ -165,12 +160,6 @@
                     <p>
                         Experienced in conducting structured security assessments, performing vulnerability audits, and producing actionable CVSS-based reports for client engagements. Committed to continuous technical growth, ethical hacking, and practical security testing.
                     </p>
-                    <div class="about-resume-cta">
-                        <a href="assets/Ram_Sewak_Sharma_Resume.pdf" download="Ram_Sewak_Sharma_Resume.pdf" target="_blank" class="btn btn-primary" id="downloadResumeAbout">
-                            <i class="fa-solid fa-file-arrow-down"></i>
-                            Download Resume (PDF)
-                        </a>
-                    </div>
                 </div>
                 <div class="about-info-cards reveal">
                     <div class="info-card">
@@ -197,7 +186,7 @@
                         </div>
                         <div>
                             <span class="info-label">Current Role</span>
-                            <span class="info-value">Cyber Security Analyst — SOC &amp; VAPT @ Cryptus</span>
+                            <span class="info-value">Cyber Security Analyst — VAPT &amp; Network Security @ Cryptus</span>
                         </div>
                     </div>
                     <div class="info-card">
@@ -362,31 +351,32 @@
                     </div>
                 </div>
 
-                <!-- 5. Mobile Application Security -->
+                <!-- 5. Security Automation & Exploit Scripting -->
                 <div class="service-card reveal">
                     <div class="service-top">
                         <div class="service-header-row">
                             <div class="service-icon">
-                                <i class="fa-brands fa-android"></i>
+                                <i class="fa-solid fa-terminal"></i>
                             </div>
-                            <span class="service-badge">Mobile Security</span>
+                            <span class="service-badge">Automation &amp; Tooling</span>
                         </div>
-                        <h3 class="service-title">Mobile App Security (Android)</h3>
+                        <h3 class="service-title">Security Automation &amp; Scripting</h3>
                         <p class="service-desc">
-                            Static and dynamic security analysis of Android applications (APK) to protect client-side business logic and sensitive user data.
+                            Developing custom reconnaissance scripts, network scanners, and automated test harnesses using Python &amp; Bash to streamline vulnerability identification.
                         </p>
                         <ul class="service-deliverables">
-                            <li><i class="fa-solid fa-circle-check"></i> SAST (source/binary decompilation) &amp; DAST runtime analysis</li>
-                            <li><i class="fa-solid fa-circle-check"></i> SSL pinning bypass, root detection bypass &amp; Frida hooks</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Insecure local storage &amp; IPC component security review</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Custom Python tools for automated recon, port scanning &amp; fuzzing</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Custom payload crafting and proof-of-concept (PoC) automation</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Automated pentest workflows to accelerate security audits</li>
                         </ul>
                     </div>
                     <div class="service-bottom">
                         <div class="service-tags">
-                            <span class="service-tag">MobSF</span>
-                            <span class="service-tag">Jadx-GUI</span>
-                            <span class="service-tag">Frida</span>
-                            <span class="service-tag">Drozer</span>
+                            <span class="service-tag">Python</span>
+                            <span class="service-tag">Bash</span>
+                            <span class="service-tag">Scapy</span>
+                            <span class="service-tag">Requests</span>
+                            <span class="service-tag">Custom Tooling</span>
                         </div>
                         <div class="service-footer">
                             <a href="#contact" class="service-cta">
@@ -396,31 +386,31 @@
                     </div>
                 </div>
 
-                <!-- 6. SOC Analysis & Threat Monitoring -->
+                <!-- 6. Vulnerability Remediation & Security Auditing -->
                 <div class="service-card reveal">
                     <div class="service-top">
                         <div class="service-header-row">
                             <div class="service-icon">
-                                <i class="fa-solid fa-tower-broadcast"></i>
+                                <i class="fa-solid fa-clipboard-check"></i>
                             </div>
-                            <span class="service-badge">Blue Team</span>
+                            <span class="service-badge">Security Auditing</span>
                         </div>
-                        <h3 class="service-title">SOC Analysis &amp; Threat Monitoring</h3>
+                        <h3 class="service-title">Vulnerability Remediation &amp; Auditing</h3>
                         <p class="service-desc">
-                            Continuous security event monitoring, log correlation across SIEM platforms, incident triage, threat hunting, and containment coordination.
+                            Translating pentest findings into actionable developer mitigation strategies, validating security patches, and establishing CVSS-based risk mitigation priorities.
                         </p>
                         <ul class="service-deliverables">
-                            <li><i class="fa-solid fa-circle-check"></i> Real-time SIEM log monitoring, alert triage &amp; investigation</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Phishing analysis, IOC extraction &amp; MITRE ATT&amp;CK mapping</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Incident ticketing, incident reports &amp; containment workflow</li>
+                            <li><i class="fa-solid fa-circle-check"></i> CVSS v3.1 scoring, vulnerability prioritization &amp; risk analysis</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Developer debriefing and precise remediation guidance</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Post-remediation verification testing &amp; configuration hardening</li>
                         </ul>
                     </div>
                     <div class="service-bottom">
                         <div class="service-tags">
-                            <span class="service-tag">Splunk</span>
-                            <span class="service-tag">Wazuh</span>
-                            <span class="service-tag">Wireshark</span>
-                            <span class="service-tag">MITRE ATT&amp;CK</span>
+                            <span class="service-tag">CVSS v3.1</span>
+                            <span class="service-tag">Remediation</span>
+                            <span class="service-tag">NIST</span>
+                            <span class="service-tag">Security Hardening</span>
                         </div>
                         <div class="service-footer">
                             <a href="#contact" class="service-cta">
@@ -437,7 +427,7 @@
                     <div class="hire-cta-badge">
                         <span class="status-dot"></span> Available for Full-Time Roles &amp; Security Audits
                     </div>
-                    <h3 class="hire-cta-title">Looking for an Offensive Security Specialist or SOC Analyst?</h3>
+                    <h3 class="hire-cta-title">Looking for an Offensive Security Specialist or VAPT Engineer?</h3>
                     <p class="hire-cta-desc">
                         Whether you are hiring for a permanent Cyber Security Analyst / VAPT role or need a specialized security assessment for your applications and networks, let's connect.
                     </p>
@@ -469,7 +459,7 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div>
-                                <h3 class="timeline-role">Cyber Security Analyst — SOC &amp; VAPT</h3>
+                                <h3 class="timeline-role">Cyber Security Analyst — VAPT &amp; Network Security</h3>
                                 <p class="timeline-company">
                                     <i class="fa-solid fa-building"></i>
                                     Cryptus Cyber Security Pvt. Ltd. — Delhi, India
@@ -682,15 +672,15 @@
                 <div class="skill-category reveal">
                     <div class="skill-category-header">
                         <div class="skill-cat-icon"><i class="fa-solid fa-chart-line"></i></div>
-                        <h3>SIEM &amp; Monitoring</h3>
+                        <h3>SIEM &amp; Monitoring (Basic)</h3>
                     </div>
                     <div class="skill-tags">
-                        <span class="skill-tag">Splunk</span>
-                        <span class="skill-tag">Wazuh</span>
-                        <span class="skill-tag">Nessus</span>
-                        <span class="skill-tag">OpenVAS</span>
-                        <span class="skill-tag">Log Analysis</span>
-                        <span class="skill-tag">Incident Triage</span>
+                        <span class="skill-tag">Splunk (Basic)</span>
+                        <span class="skill-tag">Wazuh (Basic)</span>
+                        <span class="skill-tag">Nessus (Basic)</span>
+                        <span class="skill-tag">OpenVAS (Basic)</span>
+                        <span class="skill-tag">Log Analysis (Basic)</span>
+                        <span class="skill-tag">Incident Triage (Basic)</span>
                     </div>
                 </div>
 
@@ -894,6 +884,6 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <script src="script.js?v=12"></script>
+    <script src="script.js?v=13"></script>
 </body>
 </html>
