@@ -138,26 +138,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---------- Counter Animation ----------
     const statNumbers = document.querySelectorAll('.stat-number[data-count]');
-    const counterObserver = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const el = entry.target;
-                    const target = parseInt(el.getAttribute('data-count'));
-                    animateCounter(el, target);
-                    counterObserver.unobserve(el);
-                }
-            });
-        },
-        { threshold: 0.5 }
-    );
-
-    statNumbers.forEach(el => counterObserver.observe(el));
 
     function animateCounter(el, target) {
         let current = 0;
-        const totalDuration = 1000;
-        const steps = 30;
+        const totalDuration = 1200;
+        const steps = 35;
         const increment = target / steps;
         const stepTime = totalDuration / steps;
 
@@ -173,19 +158,55 @@ document.addEventListener('DOMContentLoaded', () => {
         }, stepTime);
     }
 
-    // ---------- Hero Particles ----------
-    const particlesContainer = document.getElementById('heroParticles');
+    let countersStarted = false;
+    function runCounters() {
+        if (countersStarted) return;
+        countersStarted = true;
+        statNumbers.forEach(el => {
+            const target = parseInt(el.getAttribute('data-count'), 10);
+            if (!isNaN(target)) {
+                animateCounter(el, target);
+            }
+        });
+    }
+
+    // Auto-trigger 300ms after load so the numbers visibly count up from 0 every time!
+    setTimeout(runCounters, 300);
+
+    // Also support intersection observer as fallback
+    const counterObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    runCounters();
+                    counterObserver.disconnect();
+                }
+            });
+        },
+        { threshold: 0.05 }
+    );
+    statNumbers.forEach(el => counterObserver.observe(el));
+
+    // ---------- Full-Page Ambient Cyber Particles ----------
+    const particlesContainer = document.getElementById('globalParticles') || document.getElementById('heroParticles');
     if (particlesContainer) {
-        for (let i = 0; i < 25; i++) {
+        particlesContainer.innerHTML = '';
+        const particleCount = 50;
+        for (let i = 0; i < particleCount; i++) {
             const particle = document.createElement('div');
             particle.classList.add('particle');
+            if (i % 3 === 0) {
+                particle.classList.add('cyan');
+            }
             particle.style.left = `${Math.random() * 100}%`;
-            particle.style.animationDuration = `${8 + Math.random() * 12}s`;
-            particle.style.animationDelay = `${Math.random() * 10}s`;
-            const size = 2 + Math.random() * 4;
+            const duration = 9 + Math.random() * 13;
+            particle.style.animationDuration = `${duration}s`;
+            // Negative delay distributes spots across entire screen instantly on load!
+            particle.style.animationDelay = `-${Math.random() * duration}s`;
+            const size = 2 + Math.random() * 3.5;
             particle.style.width = `${size}px`;
             particle.style.height = `${size}px`;
-            particle.style.opacity = `${0.15 + Math.random() * 0.25}`;
+            particle.style.opacity = `${0.25 + Math.random() * 0.45}`;
             particlesContainer.appendChild(particle);
         }
     }
