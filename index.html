@@ -21,7 +21,7 @@
     <!-- Font Awesome 6 Icons (reliable, includes brand icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
 
@@ -41,11 +41,18 @@
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#certifications" class="nav-link">Certifications</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="assets/Ram_Sewak_Sharma_Resume.pdf" download="Ram_Sewak_Sharma_Resume.pdf" target="_blank" class="nav-link nav-link-resume"><i class="fa-solid fa-file-arrow-down"></i> Resume</a></li>
             </ul>
-            <a href="#contact" class="nav-cta">
-                <i class="fa-solid fa-paper-plane"></i>
-                Hire Me
-            </a>
+            <div class="nav-actions">
+                <a href="assets/Ram_Sewak_Sharma_Resume.pdf" download="Ram_Sewak_Sharma_Resume.pdf" target="_blank" class="nav-resume" title="Download Ram Sewak Sharma's Resume (PDF)">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <span>Resume</span>
+                </a>
+                <a href="#contact" class="nav-cta">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Hire Me
+                </a>
+            </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
             </button>
@@ -82,11 +89,15 @@
                     Cybersecurity professional specializing in <strong>Penetration Testing</strong>, <strong>Vulnerability Assessment</strong>, and <strong>Application Security</strong>, with hands-on experience in web, API, network, and mobile security testing.
                 </p>
                 <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">
+                    <a href="assets/Ram_Sewak_Sharma_Resume.pdf" download="Ram_Sewak_Sharma_Resume.pdf" target="_blank" class="btn btn-primary" id="downloadResumeHero">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        Download Resume
+                    </a>
+                    <a href="#projects" class="btn btn-outline">
                         <i class="fa-solid fa-folder-open"></i>
                         View My Work
                     </a>
-                    <a href="#contact" class="btn btn-outline">
+                    <a href="#contact" class="btn btn-ghost">
                         <i class="fa-solid fa-paper-plane"></i>
                         Get In Touch
                     </a>
@@ -153,6 +164,12 @@
                     <p>
                         Experienced in conducting structured security assessments, performing vulnerability audits, and producing actionable CVSS-based reports for client engagements. Committed to continuous technical growth, ethical hacking, and practical security testing.
                     </p>
+                    <div class="about-resume-cta">
+                        <a href="assets/Ram_Sewak_Sharma_Resume.pdf" download="Ram_Sewak_Sharma_Resume.pdf" target="_blank" class="btn btn-primary" id="downloadResumeAbout">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            Download Resume (PDF)
+                        </a>
+                    </div>
                 </div>
                 <div class="about-info-cards reveal">
                     <div class="info-card">
@@ -636,6 +653,6 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <script src="script.js?v=10"></script>
+    <script src="script.js?v=11"></script>
 </body>
 </html>

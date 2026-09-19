@@ -253,6 +253,46 @@ body {
     transform: translateY(-2px);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-resume {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: rgba(0, 229, 255, 0.08);
+    border: 1px solid var(--cyber-cyan);
+    color: var(--cyber-cyan);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+}
+
+.nav-resume:hover {
+    background: var(--cyber-cyan);
+    color: #050811;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.nav-link-resume {
+    color: var(--cyber-cyan) !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.about-resume-cta {
+    margin-top: 24px;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -1682,7 +1722,9 @@ body {
         display: flex;
     }
 
-    .nav-cta {
+    .nav-cta,
+    .nav-resume,
+    .nav-actions {
         display: none;
     }
 
