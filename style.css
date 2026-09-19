@@ -1730,6 +1730,135 @@ body {
 }
 
 /* ============================================= 
+   I'M OPEN FOR SECTION
+   ============================================= */
+.open-for-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.open-for-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-xl);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.open-for-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.open-for-card:hover {
+    border-color: rgba(0, 255, 157, 0.35);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 255, 157, 0.1);
+    transform: translateY(-5px);
+}
+
+.open-for-card:hover::before {
+    opacity: 1;
+}
+
+.open-for-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.open-for-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 255, 157, 0.08);
+    border: 1px solid rgba(0, 255, 157, 0.25);
+    border-radius: var(--radius-lg);
+    color: var(--neon-green);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.open-for-card:hover .open-for-icon {
+    background: var(--neon-green);
+    color: #050811;
+    box-shadow: 0 0 18px var(--neon-green);
+}
+
+.open-for-badge {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 229, 255, 0.08);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    color: var(--cyber-cyan);
+}
+
+.open-for-card-title {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+.open-for-card:hover .open-for-card-title {
+    color: var(--neon-green);
+}
+
+.open-for-card-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.open-for-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.open-for-tag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 3px 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.open-for-card:hover .open-for-tag {
+    border-color: rgba(0, 255, 157, 0.2);
+    color: var(--text);
+}
+
+/* ============================================= 
    CONTACT SECTION (Single Line Guaranteed)
    ============================================= */
 .contact-grid {
