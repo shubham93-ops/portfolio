@@ -1694,6 +1694,11 @@ body {
     box-shadow: 0 0 20px var(--cyber-cyan);
 }
 
+.cert-info {
+    flex: 1;
+    min-width: 0;
+}
+
 .cert-info h3 {
     font-size: 1.05rem;
     font-weight: 700;
@@ -1712,10 +1717,11 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     color: var(--text-muted);
     margin-right: 14px;
     font-family: var(--font-mono);
+    white-space: nowrap;
 }
 
 .cert-issuer i, .cert-date i {
