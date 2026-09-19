@@ -1384,8 +1384,8 @@ ul, ol {
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    max-width: 1000px;
+    gap: 16px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -1394,7 +1394,7 @@ ul, ol {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 36px 24px;
+    padding: 32px 14px;
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
@@ -1464,9 +1464,11 @@ ul, ol {
 }
 
 .contact-card p {
-    font-size: 0.88rem;
+    font-size: 0.82rem;
+    font-weight: 500;
     color: var(--text-secondary);
-    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     position: relative;
     z-index: 1;
     transition: var(--transition);
@@ -1627,6 +1629,12 @@ ul, ol {
 
     .about-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 650px;
+        gap: 16px;
     }
 }
 
