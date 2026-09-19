@@ -1585,218 +1585,59 @@ ul, ol {
 }
 
 /* ============================================= 
-   HACKER / CYBER ELEMENTS
+   CLASSY CYBERSECURITY & OFFENSIVE ACCENTS
    ============================================= */
 
-/* Matrix Rain Canvas in Hero */
-.hero-matrix-canvas {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.12;
+/* Subtle cyber-accent highlight on cards when hovered */
+.project-card:hover {
+    border-color: rgba(6, 182, 212, 0.45);
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.1), 0 0 25px rgba(6, 182, 212, 0.12);
 }
 
-/* Cyber Terminal in About Section */
-.cyber-terminal-wrapper {
-    margin-top: 48px;
-    width: 100%;
+.skill-category:hover {
+    border-color: rgba(37, 99, 235, 0.35);
+    box-shadow: 0 12px 35px rgba(37, 99, 235, 0.08), 0 0 20px rgba(6, 182, 212, 0.08);
 }
 
-.cyber-terminal {
-    background: #090e17;
-    border: 1px solid rgba(37, 99, 235, 0.3);
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(2, 6, 23, 0.25), 0 0 35px rgba(37, 99, 235, 0.15);
-    position: relative;
-    font-family: var(--font-mono);
+.cert-card:hover {
+    border-color: rgba(6, 182, 212, 0.4);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08), 0 0 20px rgba(6, 182, 212, 0.1);
 }
 
-.cyber-terminal::after {
+/* Subtle scanning cyber beam across hero background */
+.hero-bg-grid::after {
     content: '';
     position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.15) 0px,
-        rgba(0, 0, 0, 0.15) 1px,
-        transparent 1px,
-        transparent 2px
-    );
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.6), rgba(37, 99, 235, 0.8), transparent);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+    animation: cyberScan 7s ease-in-out infinite;
     pointer-events: none;
-    opacity: 0.5;
 }
 
-.terminal-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-    background: #0f172a;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+@keyframes cyberScan {
+    0% { top: 0%; opacity: 0; }
+    15% { opacity: 0.85; }
+    85% { opacity: 0.85; }
+    100% { top: 100%; opacity: 0; }
 }
 
-.terminal-dots {
-    display: flex;
-    gap: 8px;
-}
-
-.term-dot {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.dot-red { background: #ef4444; box-shadow: 0 0 8px rgba(239, 68, 68, 0.5); }
-.dot-yellow { background: #f59e0b; box-shadow: 0 0 8px rgba(245, 158, 11, 0.5); }
-.dot-green { background: #10b981; box-shadow: 0 0 8px rgba(16, 185, 129, 0.5); }
-
-.terminal-title {
-    font-size: 0.82rem;
-    color: #94a3b8;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    letter-spacing: 0.5px;
-}
-
-.terminal-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 3px 10px;
-    background: rgba(16, 185, 129, 0.12);
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    border-radius: var(--radius-full);
-    font-size: 0.72rem;
-    color: #34d399;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-.terminal-status-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #10b981;
-    box-shadow: 0 0 8px #10b981;
-    animation: term-pulse 1.8s infinite;
-}
-
-@keyframes term-pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.35; transform: scale(0.8); }
-}
-
-.terminal-body {
-    padding: 24px;
-    color: #cbd5e1;
-    font-size: 0.86rem;
-    line-height: 1.7;
-    position: relative;
-    z-index: 1;
-}
-
-.term-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-    margin-bottom: 4px;
-    flex-wrap: wrap;
-}
-
-.term-prompt {
-    color: #38bdf8;
-    font-weight: 600;
-}
-
-.term-cmd {
-    color: #f8fafc;
-    font-weight: 500;
-}
-
-.term-response {
-    padding-left: 14px;
-    color: #94a3b8;
-    font-size: 0.83rem;
-    margin-bottom: 4px;
-}
-
-.term-white {
-    color: #f1f5f9;
-    font-weight: 600;
-}
-
-.term-muted {
-    color: #64748b;
-    font-style: italic;
-}
-
-.term-port {
-    color: #38bdf8;
-    font-weight: 600;
-    font-size: 0.82rem;
-}
-
-.term-status-open {
-    color: #34d399;
-    font-weight: 700;
-    margin: 0 8px;
-    font-size: 0.82rem;
-}
-
-.term-note {
-    color: #94a3b8;
-    font-size: 0.78rem;
-}
-
-.term-tag {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    margin-right: 6px;
-    letter-spacing: 0.5px;
-}
-
-.term-tag-hero {
-    background: rgba(37, 99, 235, 0.25);
-    color: #60a5fa;
-    border: 1px solid rgba(96, 165, 250, 0.35);
-}
-
-.term-json {
-    color: #cbd5e1;
+/* Classy cybersecurity terminal prefix in hero */
+.tagline-prefix {
+    color: var(--accent);
     font-family: var(--font-mono);
-    font-size: 0.82rem;
-    background: rgba(15, 23, 42, 0.7);
-    border-left: 3px solid #2563eb;
-    margin: 8px 0 8px 14px;
-    padding: 12px 18px;
-    border-radius: 0 8px 8px 0;
-    overflow-x: auto;
+    font-weight: 700;
+    margin-right: 4px;
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.3);
 }
 
-.json-k { color: #38bdf8; }
-.json-s { color: #a5f3fc; }
-.json-v { color: #f59e0b; font-weight: bold; }
-
-.term-cursor {
-    color: #34d399;
-    font-weight: bold;
-    animation: term-blink 1s step-end infinite;
-}
-
-@keyframes term-blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+.cursor {
+    color: var(--accent);
+    font-weight: 700;
+    animation: blink 0.8s infinite;
 }
 
 /* ============================================= 

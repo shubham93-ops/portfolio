@@ -187,64 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ---------- Subtle Cyber Matrix Rain Animation ----------
-    const matrixCanvas = document.getElementById('heroMatrix');
-    if (matrixCanvas) {
-        const ctx = matrixCanvas.getContext('2d');
-        let width = (matrixCanvas.width = matrixCanvas.offsetWidth || window.innerWidth);
-        let height = (matrixCanvas.height = matrixCanvas.offsetHeight || 700);
-
-        function resizeMatrix() {
-            if (!matrixCanvas) return;
-            width = matrixCanvas.width = matrixCanvas.offsetWidth || window.innerWidth;
-            height = matrixCanvas.height = matrixCanvas.offsetHeight || 700;
-        }
-
-        window.addEventListener('resize', resizeMatrix);
-
-        const chars = '011001010101010110010101ABCDEF0123456789<>/_[]{}!#*+=-';
-        const fontSize = 13;
-        let columns = Math.floor(width / fontSize);
-        let drops = Array(columns).fill(1);
-
-        function drawMatrix() {
-            ctx.fillStyle = 'rgba(248, 250, 252, 0.08)';
-            ctx.fillRect(0, 0, width, height);
-
-            ctx.font = `${fontSize}px 'JetBrains Mono', monospace`;
-
-            for (let i = 0; i < drops.length; i++) {
-                // Subtle cyber colors (blue/cyan with rare bright highlight)
-                const rand = Math.random();
-                if (rand > 0.90) {
-                    ctx.fillStyle = '#06b6d4'; // Cyan
-                } else if (rand > 0.80) {
-                    ctx.fillStyle = '#10b981'; // Emerald
-                } else {
-                    ctx.fillStyle = 'rgba(37, 99, 235, 0.7)'; // Primary blue
-                }
-
-                const char = chars[Math.floor(Math.random() * chars.length)];
-                ctx.fillText(char, i * fontSize, drops[i] * fontSize);
-
-                if (drops[i] * fontSize > height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
-
-        let matrixInterval = setInterval(drawMatrix, 50);
-
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                clearInterval(matrixInterval);
-            } else {
-                matrixInterval = setInterval(drawMatrix, 50);
-            }
-        });
-    }
-
     // ---------- Smooth Scroll for all anchor links ----------
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {

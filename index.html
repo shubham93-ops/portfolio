@@ -21,7 +21,7 @@
     <!-- Font Awesome 6 Icons (reliable, includes brand icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -52,7 +52,6 @@
     <!-- ========== HERO SECTION ========== -->
     <section class="hero" id="hero">
         <div class="hero-bg-grid"></div>
-        <canvas class="hero-matrix-canvas" id="heroMatrix"></canvas>
         <div class="hero-glow hero-glow-1"></div>
         <div class="hero-glow hero-glow-2"></div>
         <div class="hero-particles" id="heroParticles"></div>
@@ -198,45 +197,6 @@
                             <span class="info-label">Email</span>
                             <span class="info-value">kramsewak12345@gmail.com</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cyber Terminal Interactive Widget -->
-            <div class="cyber-terminal-wrapper reveal">
-                <div class="cyber-terminal">
-                    <div class="terminal-bar">
-                        <div class="terminal-dots">
-                            <span class="term-dot dot-red"></span>
-                            <span class="term-dot dot-yellow"></span>
-                            <span class="term-dot dot-green"></span>
-                        </div>
-                        <div class="terminal-title">
-                            <i class="fa-solid fa-terminal"></i> offensive-sec@kali: ~ (audit.sh)
-                        </div>
-                        <div class="terminal-badge">
-                            <span class="terminal-status-dot"></span> LIVE AUDIT
-                        </div>
-                    </div>
-                    <div class="terminal-body" id="terminalBody">
-                        <div class="term-row"><span class="term-prompt">shubham@kali:~$</span> <span class="term-cmd">whoami</span></div>
-                        <div class="term-response term-white"><span class="term-tag term-tag-hero">IDENTITY</span> Ram Sewak Sharma — Penetration Tester &amp; Cybersecurity Analyst</div>
-                        
-                        <div class="term-row"><span class="term-prompt">shubham@kali:~$</span> <span class="term-cmd">nmap -sV -p 80,443,22 target.internal</span></div>
-                        <div class="term-response term-muted">[*] Initiating SYN Stealth Scan &amp; Service Detection...</div>
-                        <div class="term-response"><span class="term-port">PORT 22/tcp</span>  <span class="term-status-open">OPEN</span>  ssh    <span class="term-note">[Key Auth Only • Hardened]</span></div>
-                        <div class="term-response"><span class="term-port">PORT 80/tcp</span>  <span class="term-status-open">OPEN</span>  http   <span class="term-note">[Nginx 1.24 • OWASP Sanitized]</span></div>
-                        <div class="term-response"><span class="term-port">PORT 443/tcp</span> <span class="term-status-open">OPEN</span>  https  <span class="term-note">[TLS 1.3 • A+ Security Rating]</span></div>
-                        
-                        <div class="term-row"><span class="term-prompt">shubham@kali:~$</span> <span class="term-cmd">cat /etc/security_manifest.json</span></div>
-                        <pre class="term-json">{
-  <span class="json-k">"offensive_toolkit"</span>: [<span class="json-s">"Burp Suite"</span>, <span class="json-s">"Metasploit"</span>, <span class="json-s">"Nmap"</span>, <span class="json-s">"Wireshark"</span>],
-  <span class="json-k">"siem_defensive"</span>:    [<span class="json-s">"Splunk"</span>, <span class="json-s">"Wazuh"</span>, <span class="json-s">"Nessus"</span>, <span class="json-s">"Snort IDS"</span>],
-  <span class="json-k">"vulnerabilities_reported"</span>: <span class="json-v">15</span>,
-  <span class="json-k">"honeywell_training"</span>: <span class="json-s">"Grade A Certificate of Recognition"</span>,
-  <span class="json-k">"status"</span>: <span class="json-s">"Available for Offensive Security &amp; SOC Roles"</span>
-}</pre>
-                        <div class="term-row"><span class="term-prompt">shubham@kali:~$</span> <span class="term-cursor">█</span></div>
                     </div>
                 </div>
             </div>
@@ -634,6 +594,6 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
 </body>
 </html>
