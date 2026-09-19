@@ -7,11 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---------- Typing Animation ----------
     const typedTextEl = document.getElementById('typedText');
     const phrases = [
-        'Penetration Tester & Ethical Hacker',
-        'VAPT Specialist | Bug Hunter',
-        'Offensive Security Analyst',
-        'Application & Network Penetration Tester',
-        'SOC Analyst & Security Researcher',
+        'Penetration Tester & Security Analyst',
+        'Vulnerability Assessment & Penetration Testing (VAPT)',
+        'Application & Network Security Tester',
+        'Ethical Hacker & Security Tool Developer',
     ];
     let phraseIndex = 0;
     let charIndex = 0;
@@ -157,16 +156,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function animateCounter(el, target) {
         let current = 0;
-        const increment = target / 50;
-        const stepTime = 30;
+        const totalDuration = 1000;
+        const steps = 30;
+        const increment = target / steps;
+        const stepTime = totalDuration / steps;
 
         const timer = setInterval(() => {
             current += increment;
             if (current >= target) {
                 current = target;
+                el.textContent = target;
                 clearInterval(timer);
+            } else {
+                el.textContent = Math.floor(current);
             }
-            el.textContent = Math.floor(current);
         }, stepTime);
     }
 
