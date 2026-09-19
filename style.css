@@ -179,11 +179,14 @@ body {
     font-weight: 800;
     color: var(--text);
     text-decoration: none;
-    letter-spacing: -0.5px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-mono);
+    letter-spacing: -0.3px;
+    font-family: var(--font-sans);
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.nav-logo:hover {
+    opacity: 0.92;
 }
 
 .logo-accent {
@@ -1994,10 +1997,14 @@ body {
     font-weight: 800;
     color: var(--text);
     text-decoration: none;
-    font-family: var(--font-mono);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    font-family: var(--font-sans);
+    letter-spacing: -0.3px;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.footer-logo:hover {
+    opacity: 0.92;
 }
 
 .footer-text {
