@@ -1394,7 +1394,8 @@ ul, ol {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 32px 14px;
+    padding: 28px 8px;
+    min-width: 0;
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
@@ -1467,11 +1468,18 @@ ul, ol {
     font-size: 0.82rem;
     font-weight: 500;
     color: var(--text-secondary);
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
     position: relative;
     z-index: 1;
     transition: var(--transition);
+    max-width: 100%;
+}
+
+#contact-email p {
+    font-size: 0.77rem;
+    letter-spacing: -0.2px;
 }
 
 /* ============================================= 
