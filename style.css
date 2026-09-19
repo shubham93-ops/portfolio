@@ -182,6 +182,7 @@ body {
     letter-spacing: -0.3px;
     font-family: var(--font-sans);
     display: inline-block;
+    white-space: nowrap;
     transition: var(--transition);
 }
 
@@ -206,6 +207,7 @@ body {
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
+    white-space: nowrap;
     transition: var(--transition);
     position: relative;
     padding: 4px 0;
@@ -1974,6 +1976,7 @@ body {
 }
 
 .faq-answer-content {
+    min-height: 0;
     overflow: hidden;
 }
 
@@ -2150,6 +2153,7 @@ body {
     font-family: var(--font-sans);
     letter-spacing: -0.3px;
     display: inline-block;
+    white-space: nowrap;
     transition: var(--transition);
 }
 

@@ -21,7 +21,7 @@
     <!-- Font Awesome 6 Icons (reliable, includes brand icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="stylesheet" href="style.css?v=20">
+    <link rel="stylesheet" href="style.css?v=21">
 </head>
 <body>
 
@@ -40,7 +40,6 @@
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#certifications" class="nav-link">Certifications</a></li>
                 <li><a href="#open-for" class="nav-link">Open For</a></li>
-                <li><a href="#faq" class="nav-link">FAQ</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
@@ -964,8 +963,8 @@
 
             <div class="faq-container">
                 <!-- FAQ Item 1 -->
-                <div class="faq-item reveal active">
-                    <button class="faq-question" aria-expanded="true">
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         <span class="faq-question-text">What specific security testing services do you offer?</span>
                         <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                     </button>
@@ -985,7 +984,7 @@
 
                 <!-- FAQ Item 2 -->
                 <div class="faq-item reveal">
-                    <button class="faq-question" aria-expanded="false">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         <span class="faq-question-text">What methodology and frameworks do you follow during assessments?</span>
                         <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                     </button>
@@ -1006,7 +1005,7 @@
 
                 <!-- FAQ Item 3 -->
                 <div class="faq-item reveal">
-                    <button class="faq-question" aria-expanded="false">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         <span class="faq-question-text">What will the deliverables and final VAPT report look like?</span>
                         <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                     </button>
@@ -1027,7 +1026,7 @@
 
                 <!-- FAQ Item 4 -->
                 <div class="faq-item reveal">
-                    <button class="faq-question" aria-expanded="false">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         <span class="faq-question-text">Do you provide re-testing after our developers patch the vulnerabilities?</span>
                         <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                     </button>
@@ -1042,7 +1041,7 @@
 
                 <!-- FAQ Item 5 -->
                 <div class="faq-item reveal">
-                    <button class="faq-question" aria-expanded="false">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         <span class="faq-question-text">What is your current availability and notice period?</span>
                         <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                     </button>
@@ -1061,7 +1060,7 @@
 
                 <!-- FAQ Item 6 -->
                 <div class="faq-item reveal">
-                    <button class="faq-question" aria-expanded="false">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         <span class="faq-question-text">How do you handle client confidentiality and sensitive data?</span>
                         <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
                     </button>
@@ -1153,6 +1152,6 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <script src="script.js?v=20"></script>
+    <script src="script.js?v=21"></script>
 </body>
 </html>
